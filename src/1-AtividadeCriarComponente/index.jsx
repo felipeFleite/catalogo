@@ -5,7 +5,7 @@
 export default function Home() {
     return (
         <div>
-            
+            <h1>Confeitaria</h1>
         </div>
     );
 }
