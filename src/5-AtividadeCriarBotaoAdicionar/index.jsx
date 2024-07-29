@@ -27,7 +27,7 @@ export default function Home() {
           <div key = {produto.id}>
           <p>{produto.nome}</p>
           <p>{produto.preco}</p>
-          
+          <button onClick={()=> adicionarItensPedidos(produto)}>Comprar</button>
           </div>
           )
         }
