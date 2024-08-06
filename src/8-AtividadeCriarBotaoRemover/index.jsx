@@ -6,6 +6,8 @@
 import { useState } from "react";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import Warn from "./components/Warn"
+import Soma from "./components/Soma"
 
 export default function Home() {
   const [listaProduto, setProduto] = useState([
@@ -36,11 +38,18 @@ export default function Home() {
     })
     setListaPedidos(listaAux)
   }
-
+  const funcaoAlerta = () => {alert("Hello World")}
+  const adicao = (numeroUm,numeroDois) => {alert(numeroUm + numeroDois)}
   return (
     <div>
-        <Header title={"Arroz"}/>
+      <Warn funcaoAlerta={funcaoAlerta}/>
+
+        <Header numeroUm={1} numeroDois={2}/>
+
+        <Soma Somar ={adicao(1,2)}/>
+
         <h1>Doces</h1>
+        
         {
           listaProduto.map((produto) =>
           <div key = {produto.id}>

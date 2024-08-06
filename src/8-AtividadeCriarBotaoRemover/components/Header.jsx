@@ -1,5 +1,5 @@
-export default function Header ({title}) {
+export default function Header ({numeroUm,numeroDois}) {
     return(
-        <h1>{title}</h1>
+        <h1>{numeroUm} {numeroDois}</h1>
     )
 }
